@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB5E41E02322B535001F8D26 /* libpthread.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CB5E41DF2322B535001F8D26 /* libpthread.tbd */; };
+		CB5E41E32322EE42001F8D26 /* client.c in Sources */ = {isa = PBXBuildFile; fileRef = CB5E41E22322EE42001F8D26 /* client.c */; };
+		CB5E41E62322FF46001F8D26 /* server.c in Sources */ = {isa = PBXBuildFile; fileRef = CB5E41E52322FF46001F8D26 /* server.c */; };
 		CBF94B132321F18E00FD67D6 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = CBF94B122321F18E00FD67D6 /* main.c */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CB5E41DF2322B535001F8D26 /* libpthread.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libpthread.tbd; path = usr/lib/libpthread.tbd; sourceTree = SDKROOT; };
+		CB5E41E12322EE42001F8D26 /* client.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = client.h; sourceTree = "<group>"; };
+		CB5E41E22322EE42001F8D26 /* client.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = client.c; sourceTree = "<group>"; };
+		CB5E41E42322FF46001F8D26 /* server.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = server.h; sourceTree = "<group>"; };
+		CB5E41E52322FF46001F8D26 /* server.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = server.c; sourceTree = "<group>"; };
 		CBF94B0F2321F18E00FD67D6 /* problemset1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = problemset1; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF94B122321F18E00FD67D6 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,17 +40,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB5E41E02322B535001F8D26 /* libpthread.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB5E41DE2322B535001F8D26 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB5E41DF2322B535001F8D26 /* libpthread.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CBF94B062321F18E00FD67D6 = {
 			isa = PBXGroup;
 			children = (
 				CBF94B112321F18E00FD67D6 /* problemset1 */,
 				CBF94B102321F18E00FD67D6 /* Products */,
+				CB5E41DE2322B535001F8D26 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +76,10 @@
 			isa = PBXGroup;
 			children = (
 				CBF94B122321F18E00FD67D6 /* main.c */,
+				CB5E41E12322EE42001F8D26 /* client.h */,
+				CB5E41E22322EE42001F8D26 /* client.c */,
+				CB5E41E42322FF46001F8D26 /* server.h */,
+				CB5E41E52322FF46001F8D26 /* server.c */,
 			);
 			path = problemset1;
 			sourceTree = "<group>";
@@ -118,6 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB5E41E32322EE42001F8D26 /* client.c in Sources */,
+				CB5E41E62322FF46001F8D26 /* server.c in Sources */,
 				CBF94B132321F18E00FD67D6 /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +265,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GM8WY7JAPS;
+				GCC_VERSION = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -250,6 +275,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = GM8WY7JAPS;
+				GCC_VERSION = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
